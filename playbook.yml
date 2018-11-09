@@ -1,0 +1,10 @@
+- name: LXCDOCK with ansible
+  hosts: all
+  become: "{{ become | default('yes') }}"
+  # gather_facts: true
+  gather_facts: no
+  roles:
+    - prepare
+    - openwisp.openwisp2
+  vars:
+    openwisp2_default_from_email: "openwisp2@openwisp2.mydomain.com"

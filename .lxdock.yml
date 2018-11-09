@@ -1,0 +1,22 @@
+name: myproject
+image: ubuntu/xenial
+mode: pull
+
+containers:
+  - name: web
+    hostnames:
+      - myproject.local
+
+  # - name: ci
+  #   image: debian/jessie
+  #   privileged: true
+  #   hostnames:
+  #     - ci.local
+provisioning:
+  - type: ansible
+    playbook: playbook.yml
+    groups:
+      group1:
+        - web
+        - ci
+    lxd_transport: true

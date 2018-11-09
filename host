@@ -1,0 +1,4 @@
+[web]
+X.X.X.X ansible_user=root
+[ci]
+X.X.X.X ansible_user=root
