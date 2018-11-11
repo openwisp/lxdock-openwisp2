@@ -1,7 +1,6 @@
 - name: LXCDOCK with ansible
   hosts: all
   become: "{{ become | default('yes') }}"
-  # gather_facts: true
   gather_facts: no
   roles:
     - prepare
