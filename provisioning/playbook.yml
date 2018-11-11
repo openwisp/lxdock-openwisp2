@@ -1,0 +1,12 @@
+- name: OpenWISP2 with LXDock
+  hosts: all
+  become: "{{ become | default('yes') }}"
+  gather_facts: no
+  pre_tasks: 
+    - name: install python 2
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+  
+    - name: Gathering facts
+      setup:
+  roles:
+    - openwisp.openwisp2

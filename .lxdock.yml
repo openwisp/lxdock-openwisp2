@@ -9,7 +9,7 @@ containers:
 
 provisioning:
   - type: ansible
-    playbook: playbook.yml
+    playbook: provisioning/playbook.yml
     groups:
       openwisp2:
         - openwisp
