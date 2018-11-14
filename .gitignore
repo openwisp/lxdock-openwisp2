@@ -1,1 +1,3 @@
-lxdock
+# General
+*.logs
+*.retry

@@ -1,11 +1,13 @@
-name: openwisp2
+---
+
+name: ansible-openwisp2
 image: ubuntu/xenial
 mode: pull
 
 containers:
   - name: openwisp
     hostnames:
-      - openwisp
+      - openwisp.lxd
 
 provisioning:
   - type: ansible
@@ -13,4 +15,3 @@ provisioning:
     groups:
       openwisp2:
         - openwisp
-    lxd_transport: true
